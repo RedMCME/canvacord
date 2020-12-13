@@ -1,0 +1,75 @@
+{
+  "_from": "git+https://github.com/RedMCME/canvacord.git",
+  "_id": "canvacord@5.0.8",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/canvacord",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "canvacord@git+https://github.com/RedMCME/canvacord.git",
+    "name": "canvacord",
+    "escapedName": "canvacord",
+    "rawSpec": "git+https://github.com/RedMCME/canvacord.git",
+    "saveSpec": "git+https://github.com/RedMCME/canvacord.git",
+    "fetchSpec": "https://github.com/RedMCME/canvacord.git",
+    "gitCommittish": null
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "git+https://github.com/RedMCME/canvacord.git#253a3ce229e9baf2590c8fd56b23bb7e0c405b94",
+  "_spec": "canvacord@git+https://github.com/RedMCME/canvacord.git",
+  "_where": "/home/eren/Desktop/RedMC/Discord/hybrid",
+  "author": {
+    "name": "Snowflake107"
+  },
+  "bugs": {
+    "url": "https://github.com/DevSnowflake/Canvacord/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@canvacord/assets": "^1.0.0",
+    "canvas": "^2.6.1",
+    "gifencoder": "^2.0.1",
+    "moment": "^2.29.0",
+    "moment-duration-format": "^2.3.2",
+    "node-canvas-with-twemoji-and-discord-emoji": "^1.1.4"
+  },
+  "deprecated": false,
+  "description": "Powerful image manipulation package for beginners.",
+  "devDependencies": {
+    "@types/node": "^14.11.2",
+    "captcha-canvas": "^2.2.1",
+    "discord-canvas": "github:snowflake107/discord-canvas",
+    "discord.js-docgen": "github:discordjs/docgen"
+  },
+  "funding": {
+    "type": "individual",
+    "url": "https://paypal.me/devsnowflake"
+  },
+  "homepage": "https://canvacord.js.org",
+  "keywords": [
+    "canvacord",
+    "canvas",
+    "image",
+    "manipulation",
+    "easy",
+    "simple",
+    "fast",
+    "api"
+  ],
+  "license": "GPL-3.0",
+  "main": "index.js",
+  "name": "canvacord",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DevSnowflake/Canvacord.git"
+  },
+  "scripts": {
+    "docs": "docgen --source src --custom docs/index.yml --output docs/docs.json",
+    "docs:test": "docgen --source src --custom docs/index.yml",
+    "test": "cd test && node ."
+  },
+  "version": "5.0.8"
+}
