@@ -505,7 +505,7 @@ class Rank {
         const name = Util.shorten(this.data.username.name, 10);
 
         // apply username
-        !this.data.renderEmojis ? ctx.fillText(`${name}`, 257 + 18.5, 164) : await Util.renderEmoji(ctx, name, 257 + 18.5, 164);
+        !this.data.renderEmojis ? ctx.fillText(`${name}`, ctx.measureText(name).width + 1 + 100, 80) : await Util.renderEmoji(ctx, name, 3 + 200, 300);
 
         // draw discriminator
         if (!this.data.discriminator.discrim) throw new Error("Missing discriminator!");
@@ -514,43 +514,43 @@ class Rank {
             ctx.font = `36px ${ops.fontY}`;
             ctx.fillStyle = this.data.discriminator.color;
             ctx.textAlign = "center";
-            ctx.fillText(`#${discrim.substr(0, 4)}`, ctx.measureText(name).width + 20 + 335, 164);
+            ctx.fillText(`#${discrim.substr(0, 4)}`, ctx.measureText(name).width + 3 + 310, 82);
         }
 
         // fill level
         if (this.data.level.display && !isNaN(this.data.level.data)) {
             ctx.font = `bold 36px ${ops.fontX}`;
             ctx.fillStyle = this.data.level.textColor;
-            ctx.fillText(this.data.level.displayText, 780 - ctx.measureText(Util.toAbbrev(parseInt(this.data.level.data))).width, 82);
+            ctx.fillText(this.data.level.displayText, 799 - ctx.measureText(Util.toAbbrev(parseInt(this.data.level.data))).width, 133);
 
             ctx.font = `bold 36px ${ops.fontX}`;
             ctx.fillStyle = this.data.level.color;
             ctx.textAlign = "end";
-            ctx.fillText(Util.toAbbrev(parseInt(this.data.level.data)), 860, 82);
+            ctx.fillText(Util.toAbbrev(parseInt(this.data.level.data)), 873, 133);
         }
 
         // fill rank
         if (this.data.rank.display && this.data.rank.data) {
             ctx.font = `bold 36px ${ops.fontX}`;
             ctx.fillStyle = this.data.rank.textColor;
-            const rankX = 720 - ctx.measureText(Util.toAbbrev(parseInt(this.data.level.data)) || "-").width - 7 - ctx.measureText(this.data.level.displayText).width - 7 - ctx.measureText(Util.toAbbrev(parseInt(this.data.rank.data)) || "-").width
+            const rankX = 980 - ctx.measureText(Util.toAbbrev(parseInt(this.data.level.data)) || "-").width - 7 - ctx.measureText(this.data.level.displayText).width - 7 - ctx.measureText(Util.toAbbrev(parseInt(this.data.rank.data)) || "-").width
             console.log(rankX)
-            ctx.fillText(this.data.rank.displayText, rankX,82);
+            ctx.fillText(this.data.rank.displayText, rankX,81);
 
             ctx.font = `bold 32px ${ops.fontX}`;
             ctx.fillStyle = this.data.rank.color;
             ctx.textAlign = "end";
-            ctx.fillText(this.data.rank.data, 790 - ctx.measureText(Util.toAbbrev(parseInt(this.data.level.data)) || "-").width - 7 - ctx.measureText(this.data.level.displayText).width, 82);
+            ctx.fillText(this.data.rank.data, 1030 - ctx.measureText(Util.toAbbrev(parseInt(this.data.level.data)) || "-").width - 7 - ctx.measureText(this.data.level.displayText).width, 81);
         }
 
         // show progress
         ctx.font = `bold 30px ${ops.fontX}`;
         ctx.fillStyle = this.data.requiredXP.color;
         ctx.textAlign = "start";
-        ctx.fillText("/ " + Util.toAbbrev(this.data.requiredXP.data), 760 + ctx.measureText(Util.toAbbrev(this.data.currentXP.data)).width + 15, 164);
+        ctx.fillText("/ " + Util.toAbbrev(this.data.requiredXP.data), 268 + ctx.measureText(Util.toAbbrev(this.data.currentXP.data)).width + 15, 164);
         
         ctx.fillStyle = this.data.currentXP.color;
-        ctx.fillText(Util.toAbbrev(this.data.currentXP.data), 760, 164);
+        ctx.fillText(Util.toAbbrev(this.data.currentXP.data), 270, 164);
 
         // draw progressbar
         ctx.beginPath();

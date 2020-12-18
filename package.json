@@ -1,15 +1,19 @@
 {
+  "_args": [
+    [
+      "git+https://github.com/RedMCME/canvacord.git",
+      "C:\\Users\\camah\\Desktop\\hybrid"
+    ]
+  ],
   "_from": "git+https://github.com/RedMCME/canvacord.git",
-  "_id": "canvacord@5.0.8",
+  "_id": "canvacord@git+https://github.com/RedMCME/canvacord.git#253a3ce229e9baf2590c8fd56b23bb7e0c405b94",
   "_inBundle": false,
   "_integrity": "",
   "_location": "/canvacord",
   "_phantomChildren": {},
   "_requested": {
     "type": "git",
-    "raw": "canvacord@git+https://github.com/RedMCME/canvacord.git",
-    "name": "canvacord",
-    "escapedName": "canvacord",
+    "raw": "git+https://github.com/RedMCME/canvacord.git",
     "rawSpec": "git+https://github.com/RedMCME/canvacord.git",
     "saveSpec": "git+https://github.com/RedMCME/canvacord.git",
     "fetchSpec": "https://github.com/RedMCME/canvacord.git",
@@ -19,15 +23,14 @@
     "/"
   ],
   "_resolved": "git+https://github.com/RedMCME/canvacord.git#253a3ce229e9baf2590c8fd56b23bb7e0c405b94",
-  "_spec": "canvacord@git+https://github.com/RedMCME/canvacord.git",
-  "_where": "/home/eren/Desktop/RedMC/Discord/hybrid",
+  "_spec": "git+https://github.com/RedMCME/canvacord.git",
+  "_where": "C:\\Users\\camah\\Desktop\\hybrid",
   "author": {
     "name": "Snowflake107"
   },
   "bugs": {
     "url": "https://github.com/DevSnowflake/Canvacord/issues"
   },
-  "bundleDependencies": false,
   "dependencies": {
     "@canvacord/assets": "^1.0.0",
     "canvas": "^2.6.1",
